@@ -1,0 +1,146 @@
+<resources>
+    <string name="app_name">Disuq Guide</string>
+
+    <string name="desouk">Desouk is a city in northern Egypt. Located 80 km east of Alexandria, in the Kafr El Sheikh Governorate
+        and had a population of 137,660 inhabitants as of 2011.\nIt is bordered to the west by the Beheira
+        Governorate.\nDesouk dates back to at least c. 3200 BC, the area was part of the ancient city of Buto
+        before the unification of Upper and Lower Egypt. From 1250 to 1517 the city of Desouk was part of the
+        Gharbia province. From 1798 to 1801 it was part of the now defunct Rosetta province</string>
+    <string name="location">Location: </string>
+    <string name="title_activity_maps">Map</string>
+    <string name="coast">Coast :</string>
+    <string name="info">Information :</string>
+
+    <!--Hospitals data-->
+
+    <!--1- Elomoma data-->
+    <string name="hospital_elomoma_name">El Omoma</string>
+    <string name="hospital_elomoma_address">15 El-sharekat st,next to Railroad</string>
+    <string name="hospital_elomoma_lat_long">31.135825,30.6484451</string>
+    <string name="hospital_elomoma_cost">Based on service</string>
+    <string name="hospital_elomoma_maps_search">Elomoma Hospital</string>
+    <string name="hospital_elomoma_info">a highly specialized hospital in obstetrics and gynecology
+and recently it has started anew department in general surgery</string>
+
+
+    <!--2- Mabarrah data-->
+    <string name="hospital_mabarrah_name">Al Mabarrah</string>
+    <string name="hospital_mabarrah_address">21 El-Shaheed Abd El-Moneim Riad st, in front of orphanage</string>
+    <string name="hospital_mabarrah_lat_long">31.1325248,30.6393579</string>
+    <string name="hospital_mabarrah_cost">Based on service</string>
+    <string name="hospital_mabarrah_maps_search">Mabarrah Hospital , El-Shaheed Abd El-Moneim Riad</string>
+    <string name="hospital_mabarrah_info">Al Mabarrah is all specialities hospital </string>
+
+    <!--Restaurants data-->
+
+    <!--1- Kfc data-->
+    <string name="restaurant_kfc_name">Kfc</string>
+    <string name="restaurant_kfc_address">16 El-geish st, next to <b>Bawabat Damascus</b> restaurant</string>
+    <string name="restaurant_kfc_lat_long">31.12057,30.6497</string>
+    <string name="restaurant_kfc_cost">Based on Order</string>
+    <string name="restaurant_kfc_maps_search">دجاج كنتاكى desouk</string>
+    <string name="restaurant_kfc_info">Branch of  multinational KFC Restaurants Chain which specialize in
+    fried chicken food</string>
+
+
+    <!--2- Bawabat Damascus data-->
+    <string name="restaurant_demashq_name">Bawabat Damascus</string>
+    <string name="restaurant_demashq_address">17 El-geish st , next to <b>kfc</b> restaurant</string>
+    <string name="restaurant_demashq_lat_long">31.120779,30.64949</string>
+    <string name="restaurant_demashq_cost">Based on Order</string>
+    <string name="restaurant_demashq_maps_search">بوابة دمشق</string>
+    <string name="restaurant_demashq_info">Bawabat Damascus Restaurant for Syrian specialties and Lebanese salads\n
+    serves a very good food with affordable prices</string>
+
+
+    <!--Famous places data-->
+
+    <!--1- buto data-->
+
+    <string name="famous_buto_name">Buto </string>
+    <string name="famous_buto_address">Al Ajuzayn - Ebto</string>
+    <string name="famous_buto_lat_long">31.196389,30.744722</string>
+    <string name="famous_buto_cost">Free</string>
+    <string name="famous_buto_maps_search">none</string>
+    <string name="famous_buto_info">Buto, Butus, or Butosus, now Tell El Fara\'in and the village of Ibtu
+        or Abtu near the city of Desouk,Buto was the capital of the lower egypt before the era of unification </string>
+
+    <!--2- desouki data-->
+
+    <string name="famous_desouki_name">Ibrahim El Desouki Mosque</string>
+    <string name="famous_desouki_address">Al medan al ibrahimi</string>
+    <string name="famous_desouki_lat_long">31.1279361,30.6447538</string>
+    <string name="famous_desouki_cost">Free</string>
+    <string name="famous_desouki_maps_search">Ibrahim El Desouki Mosque</string>
+    <string name="famous_desouki_info">The Sidi Ibrahim El Desouki Mosque, better known as El Ibrahimi Mosque,
+        is the largest mosque in Desouk With an area of 7000 square meters.
+        It contains the tomb of Ibrahim El-Desouki.</string>
+
+    <!--2- church  data-->
+
+    <string name="famous_mar_name">Church of St. George </string>
+    <string name="famous_mar_address">21 saad zaghloul st ,beside railway station</string>
+    <string name="famous_mar_lat_long">31.1319169,30.6413615</string>
+    <string name="famous_mar_cost">Free</string>
+    <string name="famous_mar_maps_search">Church of St. George the Great Martyr bdsouk</string>
+    <string name="famous_mar_info">Located in Desouq, Egypt, following the Coptic Orthodox Church, it was founded in
+        1919 by decree of Sultan Fouad I, and was restored in 1967 under the late Egyptian President Gamal Abdel
+        Nasser. The church offers various services to care for the needy and the elderly along
+        with some sports and cultural activities.</string>
+
+
+    <!--3- bridge  data-->
+
+    <string name="famous_bridge_name">Desouk Bridge</string>
+    <string name="famous_bridge_address">Desouk </string>
+    <string name="famous_bridge_lat_long">31.130501,30.636793</string>
+    <string name="famous_bridge_cost">Free</string>
+    <string name="famous_bridge_maps_search">none</string>
+    <string name="famous_bridge_info">The Desouk Bridge is a steel truss bridge carrying the railway across the Lower
+        Nile in Desouk , The bridge was built between 1925 and 1927 with long of 610 meters .</string>
+
+
+    <!--Parks places data-->
+
+    <!--1- umm Al-Qura data-->
+
+    <string name="park_umm_alqura_name">umm Al-Qura Park</string>
+    <string name="park_umm_alqura_address">Al-Salheya square</string>
+    <string name="park_umm_alqura_lat_long">31.140938, 30.665170</string>
+    <string name="park_umm_alqura_cost">4 LE</string>
+    <string name="park_umm_alqura_maps_search">none</string>
+    <string name="park_umm_alqura_info">umm Al-Qura Park is the newest park ind desouk it was founded in 2016 </string>
+
+    <!--2- Family and Children data-->
+
+    <string name="park_family_name">Family and Children Park</string>
+    <string name="park_family_address">9 El-geish st.</string>
+    <string name="park_family_lat_long">31.1256238,30.6447143</string>
+    <string name="park_family_cost">5 LE</string>
+    <string name="park_family_maps_search">Family and Children Park حديقة الأسرة والطفولة</string>
+    <string name="park_family_info">Family and Children Park is the oldest park in desouk and has as special
+    section for the children </string>
+
+    <!--3- Al-Safa data-->
+
+    <string name="park_safa_name">Al-Safa Park</string>
+    <string name="park_safa_address">El-geish st , next to bus station</string>
+    <string name="park_safa_lat_long">31.1220476,30.6559739</string>
+    <string name="park_safa_cost">Free</string>
+    <string name="park_safa_maps_search">Safa Park حديقة الصفا دسوق</string>
+    <string name="park_safa_info">Safa Park is free entrance park with a place to sit on and good view </string>
+
+    <!--4- Al-nile data-->
+
+    <string name="park_nile_name">Nile river</string>
+    <string name="park_nile_address">Dessouk</string>
+    <string name="park_nile_lat_long">31.128219,30.639297</string>
+    <string name="park_nile_cost">Free</string>
+    <string name="park_nile_maps_search">none</string>
+    <string name="park_nile_info">a branch of nile river passes by dessouk</string>
+    <string name="tour">Start your tour</string>
+
+
+</resources>
+
+
