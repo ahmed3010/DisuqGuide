@@ -1,5 +1,6 @@
 package com.shohayeb.disuqGuide;
 
+import android.content.Context;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
@@ -9,10 +10,16 @@ import java.util.ArrayList;
 
 
 public class FragmentAdapter extends FragmentPagerAdapter {
+    private static final int FAMOUS_FRAGMENT = 0;
+    private static final int PARKS_FRAGMENT = 1;
+    private static final int RESTAURANTS_FRAGMENT = 2;
+    private static final int HOSPITALS_FRAGMENT = 3;
     private ArrayList<Place> placeList;
+    private Context context;
 
-    FragmentAdapter(FragmentManager fm) {
+    FragmentAdapter(Context context, FragmentManager fm) {
         super(fm);
+        this.context = context;
     }
 
     @Override
@@ -25,7 +32,7 @@ public class FragmentAdapter extends FragmentPagerAdapter {
         placeList = new ArrayList<>();
         ArrayList<Place.SpinnerItem> spinnerPlaceList = new ArrayList<>();
         switch (position) {
-            case 0:
+            case FAMOUS_FRAGMENT:
                 spinnerPlaceList.add(new Place.SpinnerItem(R.drawable.puto1, R.string.famous_buto_name
                         , R.string.famous_buto_address));
                 spinnerPlaceList.add(new Place.SpinnerItem(R.drawable.desouqy1, R.string.famous_desouki_name
@@ -36,8 +43,8 @@ public class FragmentAdapter extends FragmentPagerAdapter {
                         , R.string.famous_bridge_address));
                 placeList.add(new Place(new int[]{R.drawable.puto2, R.drawable.puto1, R.drawable.puto4,
                         R.drawable.puto5, R.drawable.puto6}, R.string.famous_buto_address,
-                        R.string.famous_buto_cost, R.string.famous_buto_maps_search, R.string.famous_buto_lat_long, 
-                        R.string.famous_buto_info,spinnerPlaceList));
+                        R.string.famous_buto_cost, R.string.famous_buto_maps_search, R.string.famous_buto_lat_long,
+                        R.string.famous_buto_info, spinnerPlaceList));
                 placeList.add(new Place(new int[]{R.drawable.desouqy1, R.drawable.desouqy2, R.drawable.desouqy3,
                         R.drawable.desouqy4, R.drawable.desouqy5}, R.string.famous_desouki_address, R.string.famous_desouki_cost,
                         R.string.famous_desouki_maps_search, R.string.famous_desouki_lat_long,
@@ -52,7 +59,7 @@ public class FragmentAdapter extends FragmentPagerAdapter {
                         R.string.famous_bridge_lat_long, R.string.famous_bridge_info, spinnerPlaceList));
 
                 break;
-            case 1:
+            case PARKS_FRAGMENT:
                 spinnerPlaceList.add(new Place.SpinnerItem(R.drawable.om1, R.string.park_umm_alqura_name
                         , R.string.park_umm_alqura_address));
                 spinnerPlaceList.add(new Place.SpinnerItem(R.drawable.family, R.string.park_family_name
@@ -82,7 +89,7 @@ public class FragmentAdapter extends FragmentPagerAdapter {
                         R.string.park_nile_lat_long, R.string.park_nile_info, spinnerPlaceList));
                 break;
 
-            case 2:
+            case RESTAURANTS_FRAGMENT:
                 spinnerPlaceList.add(new Place.SpinnerItem(R.drawable.demashq1, R.string.restaurant_demashq_name
                         , R.string.restaurant_demashq_address));
                 spinnerPlaceList.add(new Place.SpinnerItem(R.drawable.kfc, R.string.restaurant_kfc_name
@@ -97,14 +104,14 @@ public class FragmentAdapter extends FragmentPagerAdapter {
                         R.string.restaurant_kfc_lat_long, R.string.restaurant_kfc_info, spinnerPlaceList));
 
                 break;
-            case 3:
+            case HOSPITALS_FRAGMENT:
                 spinnerPlaceList.add(new Place.SpinnerItem(R.drawable.h_om9, R.string.hospital_elomoma_name
                         , R.string.hospital_elomoma_address));
                 spinnerPlaceList.add(new Place.SpinnerItem(R.drawable.mabara2, R.string.hospital_mabarrah_name
                         , R.string.hospital_mabarrah_address));
                 placeList.add(new Place(new int[]{R.drawable.h_om, R.drawable.h_om2, R.drawable.h_om3,
-                        R.drawable.h_om5, R.drawable.h_om4}, R.string.hospital_elomoma_address,
-                        R.string.hospital_elomoma_cost, R.string.hospital_elomoma_maps_search,
+                        R.drawable.h_om5, R.drawable.h_om4, R.drawable.h_om5, R.drawable.h_om8, R.drawable.h_om9,
+                        R.drawable.h_om10}, R.string.hospital_elomoma_address, R.string.hospital_elomoma_cost, R.string.hospital_elomoma_maps_search,
                         R.string.hospital_elomoma_lat_long, R.string.hospital_elomoma_info,
                         spinnerPlaceList));
                 placeList.add(new Place(new int[]{R.drawable.mabara2, R.drawable.mabara3, R.drawable.mabara4},
@@ -124,13 +131,13 @@ public class FragmentAdapter extends FragmentPagerAdapter {
     public CharSequence getPageTitle(int position) {
         switch (position) {
             case 0:
-                return "Famous";
+                return context.getResources().getString(R.string.famous);
             case 1:
-                return "Parks";
+                return context.getString(R.string.parks);
             case 2:
-                return "Restaurants";
+                return context.getString(R.string.restaurants);
             case 3:
-                return "Hospitals";
+                return context.getString(R.string.hospitals);
             default:
                 return null;
         }

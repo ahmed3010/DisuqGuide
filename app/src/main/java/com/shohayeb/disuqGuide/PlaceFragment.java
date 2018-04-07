@@ -20,6 +20,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import java.util.ArrayList;
+import java.util.Objects;
 
 import static com.shohayeb.disuqGuide.SpinnerAdapter.decodeSampledBitmapFromResource;
 
@@ -46,7 +47,7 @@ public class PlaceFragment extends Fragment {
     public static PlaceFragment newInstance(ArrayList<Place> placeList) {
         PlaceFragment fragment = new PlaceFragment();
         Bundle args = new Bundle();
-        args.putSerializable(ARG_List, placeList);
+        args.putParcelableArrayList(ARG_List, placeList);
         fragment.setArguments(args);
         return fragment;
     }
@@ -55,7 +56,7 @@ public class PlaceFragment extends Fragment {
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         if (getArguments() != null) {
-            placesList = (ArrayList<Place>) getArguments().getSerializable(ARG_List);
+            placesList = getArguments().getParcelableArrayList(ARG_List);
         }
     }
 
@@ -70,7 +71,7 @@ public class PlaceFragment extends Fragment {
         locationTextView = rootView.findViewById(R.id.location);
         infoTextView = rootView.findViewById(R.id.information);
         if (placesList != null && placesList.size() > 0) {
-            SpinnerAdapter adapter = new SpinnerAdapter(getContext(), placesList.get(0).getSpinnerItemList());
+            SpinnerAdapter adapter = new SpinnerAdapter(Objects.requireNonNull(getContext()), placesList.get(0).getSpinnerItemList());
             spinner.setAdapter(adapter);
         }
         button = rootView.findViewById(R.id.imageButton);
@@ -103,16 +104,16 @@ public class PlaceFragment extends Fragment {
                     @Override
                     public void onClick(View v) {
                         Intent mapIntent = new Intent(Intent.ACTION_VIEW, getLoc(currentPlace, position));
-                        mapIntent.setPackage("com.google.android.apps.maps");
-                        if (mapIntent.resolveActivity(getContext().getPackageManager()) != null) {
-                            startActivity(mapIntent);
-                        } else {
+                        mapIntent.setPackage(getResources().getString(R.string.google_maps_package));
+                        if (mapIntent.resolveActivity(Objects.requireNonNull(getContext()).getPackageManager()) == null) {
                             mapIntent.setPackage(null);
                             if (mapIntent.resolveActivity(getContext().getPackageManager()) != null) {
                                 startActivity(mapIntent);
                             } else {
-                                Toast.makeText(getContext(), "No maps app has been found", Toast.LENGTH_SHORT).show();
+                                Toast.makeText(getContext(), R.string.maps_not_found, Toast.LENGTH_SHORT).show();
                             }
+                        } else {
+                            startActivity(mapIntent);
                         }
                     }
                 });
@@ -126,7 +127,7 @@ public class PlaceFragment extends Fragment {
 
     private Uri getLoc(Place place, int position) {
         Uri gmmIntentUri;
-        if (getResources().getString(place.getMapSearchAddress()).equals("none")) {
+        if (getResources().getString(place.getMapSearchAddress()).equals(getString(R.string.none))) {
             String geo = getResources().getString(place.getGeo());
             String label = getResources().getString(place.getSpinnerItemList().get(position).getName());
             String uriBegin = "geo:" + geo;

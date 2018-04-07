@@ -13,7 +13,7 @@
         android:background="@color/colorPrimary"
         app:tabIndicatorColor="@color/colorAccent"
         app:tabMode="fixed"
-        android:elevation="10dp"
+        android:elevation="@dimen/medium_margin"
         android:textAlignment="textStart"
         app:tabSelectedTextColor="@android:color/white"
         app:tabTextColor="@color/text_not_selected_color" />
@@ -23,7 +23,6 @@
         android:layout_width="@dimen/zero_margin"
         android:layout_height="@dimen/zero_margin"
         android:isScrollContainer="true"
-        android:nestedScrollingEnabled="true"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"

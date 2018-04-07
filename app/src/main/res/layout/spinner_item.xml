@@ -60,6 +60,6 @@
         android:id="@+id/view"
         android:layout_width="match_parent"
         android:layout_height="@dimen/tiny"
-        android:background="@color/md_light_blue_500" />
+        android:background="@color/md_cyan_700" />
 
 </LinearLayout>

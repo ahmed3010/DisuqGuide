@@ -7,7 +7,6 @@
         before the unification of Upper and Lower Egypt. From 1250 to 1517 the city of Desouk was part of the
         Gharbia province. From 1798 to 1801 it was part of the now defunct Rosetta province</string>
     <string name="location">Location: </string>
-    <string name="title_activity_maps">Map</string>
     <string name="coast">Coast :</string>
     <string name="info">Information :</string>
 
@@ -138,7 +137,16 @@ and recently it has started anew department in general surgery</string>
     <string name="park_nile_cost">Free</string>
     <string name="park_nile_maps_search">none</string>
     <string name="park_nile_info">a branch of nile river passes by dessouk</string>
+
+
     <string name="tour">Start your tour</string>
+    <string name="maps_not_found">No maps app has been found</string>
+    <string name="none">none</string>
+    <string name="famous">Famous</string>
+    <string name="parks">Parks</string>
+    <string name="restaurants">Restaurants</string>
+    <string name="hospitals">Hospitals</string>
+    <string name="google_maps_package">com.google.android.apps.maps</string>
 
 
 </resources>
